@@ -46,15 +46,13 @@ var $output = "";
 
 if($resultado = mysqli_query($conn, $query)){
 
-    echo $resultado; 
-    //echo $resultado; 
-    //while ($fila = mysqli_fetch_row($resultado)) {
+    while ($fila = mysqli_fetch_row($resultado)) {
         //printf ("%s (%s)\n", $fila[0], $fila[1]);
 
-        //echo $fila; 
+        echo $fila[0]; 
         //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
-    //}
-    //mysqli_free_result($resultado);
+    }
+    mysqli_free_result($resultado);
 }
 
 // guardo en un array lo que está en resultado, como string
