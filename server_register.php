@@ -8,8 +8,8 @@ $database = "designdatabase";
 if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
-  	//echo $datetime_start;
-  	//echo "\n";
+  	echo $datetime_start;
+  	echo "\n";
 }
 else
 {
@@ -21,8 +21,8 @@ else
 if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
-  	//echo $datetime_end;
-  	//echo "\n";
+  	echo $datetime_end;
+  	echo "\n";
 }
 else
 {
@@ -42,7 +42,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 // guardo en resultado lo que saqué de query
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-echo $resultado;
+//echo $resultado;
 //var $output = ""; 
 
 /*
