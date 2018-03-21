@@ -24,7 +24,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN "
 // devuelve var
 //echo $var;
 //echo $resultado; 
-echo $_POST['date_time_end'];
+echo $_GET['date_time_end'];
 mysqli_close($conn);
 
 ?>
