@@ -119,7 +119,7 @@ function display_history(vector){
     var i;
     var code_html = "";
     for (i = 0; i < vector.lenght; i++){
-        code_html += "<div>ID:" + vector[i].id  + "</div>"; 
+        code_html += "<div>ID:" + vector[i][0]  + "</div>"; 
     }
     document.getElementById("history_section").innerHTML = code_html; 
 }
