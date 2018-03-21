@@ -36,7 +36,7 @@ if($resultado){
 // devuelve var
 //echo $var;
 //echo $resultado; 
-echo $fila;
+echo "\'".$fila."\'";
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
 ?>
