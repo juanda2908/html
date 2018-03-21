@@ -66,3 +66,8 @@ function initMap() {
         flightPath.setMap(map);
     }
 }
+
+function send_button_function(){
+    altert("submit was pressed"); 
+    return true; 
+}
