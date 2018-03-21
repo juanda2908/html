@@ -85,6 +85,23 @@ function send_button_function(){
     var date_end = document.getElementById("end_calendar").value;
     var time_end = document.getElementById("end_time").value + ":00"; 
 
-    //alert(date_start + "\n" + date_end); 
-    //alert(time_end); 
+    //consula a la base de datos por medio del archivo php 
+    var return_first = function () {
+        var tmp = null;
+        $.ajax({
+            'async': false,
+            'type': "POST",
+            'global': false,
+            'dataType': 'html',
+            'url': "server_register.php",
+            'success': function (data) {
+                tmp = data;
+            }
+        });
+        return tmp;     
+    }();
+
+    if (return_first==null) {
+        return_first="";
+    }
 }
