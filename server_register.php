@@ -47,8 +47,6 @@ var $output = "";
 if($resultado = mysqli_query($conn, $query)){
 
     while ($fila = mysqli_fetch_row($resultado)) {
-        //printf ("%s (%s)\n", $fila[0], $fila[1]);
-
         echo $fila[0]; 
         //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
     }
