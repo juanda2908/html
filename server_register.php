@@ -45,13 +45,14 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 var $output = ""; 
 
 if($resultado = mysqli_query($conn, $query)){
-
+    /*
     for ($i=0;$i<$fila;$i++){
         mysqli_data_seek($resultado,$i);
         $row = mysqli_fetch_row($resultado);
         echo $row[2]," ",$row[3]," ",$row[1]," ",$row[4];
         echo "\n";
     }
+    */
 }
 else {
     echo "Error\n"; 
