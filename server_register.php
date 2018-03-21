@@ -36,7 +36,7 @@ else
 
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
-$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$datetime_start' AND '$datetime_end' ORDER BY id LIMIT 10"; 
+//$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$datetime_start' AND '$datetime_end' ORDER BY id LIMIT 10"; 
 
 // guardo en resultado lo que saqué de query
 //$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
@@ -44,7 +44,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //echo $resultado;
 //var $output = ""; 
 
-/
+/*
 if($resultado = mysqli_query($conn, $query)){
     
     for ($i=0;$i<$fila;$i++){
@@ -59,7 +59,7 @@ else {
     echo "Error\n"; 
 }
 
-
+*/
 
 mysqli_close($conn);
 ?>
