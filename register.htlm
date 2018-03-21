@@ -4,5 +4,11 @@
     <title>Register</title>
 </head>
 <body>
-
+    <header>
+    <h1>Regristro Posiciones</h1>
+    <p>Jorge Aguilar<br>Karim Dasuki<br>Juan De La Hoz<br>Jorge Lambraño</p>
+    </header>
+    <section>
+    
+    </section>
 </body>
