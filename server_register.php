@@ -8,8 +8,8 @@ $database = "designdatabase";
 if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
-  	echo $datetime_start;
-  	echo "\n";
+  	//echo $datetime_start;
+  	//echo "\n";
 }
 else
 {
@@ -21,14 +21,14 @@ else
 if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
-  	echo $datetime_end;
-  	echo "\n";
+  	//echo $datetime_end;
+  	//echo "\n";
 }
 else
 {
   	//$datetime_end= null;
     //$datetime_end = "2000/1/1";
- 	echo "no fecha inicio\n";
+ 	echo "no fecha fin\n";
 }
 
 // conecta al servidor con user, contraseña
@@ -40,8 +40,11 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
-$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
+if($resultado = mysqli_query($conn, $query)){
+    echo $resultado; 
+}
 //if($resultado){
 
   //  while ($fila = mysqli_fetch_row($resultado)) {
