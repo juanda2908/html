@@ -121,8 +121,7 @@ function display_history(vector){
     for (i = 0; i < vector.lenght; i++){
         //alert(i);
         //code_html += "<div>ID:" + vector[i].id + "latitude: " + vector[i].latitude + " longitude: " + vector[i].longitude  + "</div>";
-        alert(vector[i].toString());
-        code_html += "<div>" + vector[i] +"</div>";
+        code_html += "<div>" + vector[i].datetime +"</div>";
     }
     document.getElementById("history_section").innerHTML = code_html; 
 }
