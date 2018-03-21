@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Register</title>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src = "CalendarPopup.js"></script>
     <script src = "register.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
     <script>
         var marker ; //CREA OBJETO MARCADOR
@@ -16,7 +17,6 @@
            zoom: 16,
            center: {lat: 11.019010, lng: -74.850505}
          });
-
          //marker = new google.maps.Marker({ }); //CREA OBJETO MARCADOR     
          refresh();  // FUNCION PARA REFRESCAR PAGINA
          setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 2 SEGUNDOS
@@ -70,7 +70,6 @@
        }
        </script>
 
-
 </head>
 <body>
     <header>
@@ -86,7 +85,8 @@
             <input type = "submit" value = "Enviar">
         </form>
     </section>
-    <div id = "map" ></div>
+    <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2ZqaumHJb6Zapw_JR9pMuMmmMqMCLu0I&callback=initMap"
     async defer></script>
 </body>
+</html>
