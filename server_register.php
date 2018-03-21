@@ -19,7 +19,7 @@ $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_er
 
 // guardo en un array lo que está en resultado, como string
 $fila = mysqli_fetch_row($resultado); 
-//$var = $fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
+$var = $fila;//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
 
 // devuelve var
 echo $var;
