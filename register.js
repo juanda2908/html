@@ -119,5 +119,5 @@ function send_button_function(){
         return_first="";
     }
 
-    alert(return_first); 
+    alert(return_first.toString()); 
 }

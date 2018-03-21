@@ -54,15 +54,11 @@ if($resultado = mysqli_query($conn, $query)){
     }
     mysqli_free_result($resultado);
 }
+else {
+    echo "Error\n"; 
+}
 
-// guardo en un array lo que está en resultado, como string
-//$fila = mysqli_fetch_row($resultado); 
 
-//echo $output; 
-
-// devuelve var
-//echo $var;
-echo $query;
 mysqli_close($conn);
 ?>
 
