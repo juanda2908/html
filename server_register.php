@@ -37,7 +37,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //echo $var;
 //echo $resultado; 
 //echo "\'".$fila."\'";
-echo $datetime_start
+echo "'$datetime_start'"
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
 ?>
