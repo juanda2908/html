@@ -14,7 +14,7 @@ $conn = new mysqli($host,$username,$password,$database);
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN ".$_GET['date_time_start']." AND ".$_GET['date_time_end']." ORDER BY id"; 
 
 // guardo en resultado lo que saqué de query
-//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 // guardo en un array lo que está en resultado, como string
 //$fila = mysqli_fetch_row($resultado); 
@@ -22,8 +22,8 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN ".$_
 
 // devuelve var
 //echo $var;
-//echo $resultado; 
-echo $query
+echo $resultado; 
+//echo $query
 mysqli_close($conn);
 
 ?>
