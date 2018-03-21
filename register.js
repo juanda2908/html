@@ -112,13 +112,13 @@ function send_button_function(){
     }
 
     alert(return_first); 
-    display_history(return_first.id);
+    display_history(return_first);
 }
 
 function display_history(vector){
     var i;
     var code_html = "";
-    for (i = 0; i < vector.length; i++){
+    for (i = 0; i < vector.id.length; i++){
         console.log(i);
         //alert(i);
         //code_html += "<div>ID:" + vector[i].id + "latitude: " + vector[i].latitude + " longitude: " + vector[i].longitude  + "</div>";
