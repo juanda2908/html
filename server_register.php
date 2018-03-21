@@ -5,6 +5,9 @@ $username = "admin";
 $password = "admin123456";
 $database = "designdatabase";
 
+// conecta al servidor con user, contraseña
+$conn = new mysqli($host,$username,$password,$database); 
+
 if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
@@ -31,22 +34,18 @@ else
  	echo "no fecha fin\n";
 }
 
-// conecta al servidor con user, contraseña
-$conn = new mysqli($host,$username,$password,$database); 
-
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$datetime_start' AND '$datetime_end' ORDER BY id"; 
-//$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
-$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 //echo $resultado;
 //var $output = ""; 
 
-/*
-if($resultado = mysqli_query($conn, $query)){
+/
+if($resultado = $conn->query($query)){
     
     for ($i=0;$i<$fila;$i++){
         mysqli_data_seek($resultado,$i);
@@ -59,7 +58,7 @@ if($resultado = mysqli_query($conn, $query)){
 else {
     echo "Error\n"; 
 }
-*/
+
 
 
 mysqli_close($conn);
