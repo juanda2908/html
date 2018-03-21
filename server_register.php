@@ -40,23 +40,26 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
-//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-var $output = ""; 
+echo $resultado;
+//var $output = ""; 
 
+/*
 if($resultado = mysqli_query($conn, $query)){
-    /*
+    
     for ($i=0;$i<$fila;$i++){
         mysqli_data_seek($resultado,$i);
         $row = mysqli_fetch_row($resultado);
         echo $row[2]," ",$row[3]," ",$row[1]," ",$row[4];
         echo "\n";
     }
-    */
+    
 }
 else {
     echo "Error\n"; 
 }
+*/
 
 
 mysqli_close($conn);
