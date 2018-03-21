@@ -43,7 +43,10 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 if($resultado = mysqli_query($conn, $query)){
-    echo $resultado; 
+    //echo $resultado; 
+    while ($fila = mysqli_fetch_row($resultado)) {
+        printf ("%s (%s)\n", $fila[0], $fila[1]);
+    }
 }
 //if($resultado){
 
