@@ -11,8 +11,7 @@ $conn = new mysqli($host,$username,$password,$database);
 
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
-$query = sprintf("SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN %s 
-    AND %s ORDER BY id", $_POST['date_time_start'], $_POST['date_time_end']); 
+$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN ".$_POST['date_time_start']." AND ".$_POST['date_time_end']." ORDER BY id"; 
 
 // guardo en resultado lo que saqué de query
 //$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
