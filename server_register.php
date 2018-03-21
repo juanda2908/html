@@ -27,6 +27,5 @@ $fila = mysqli_fetch_row($resultado);
 echo $fila;
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
-
 ?>
 
