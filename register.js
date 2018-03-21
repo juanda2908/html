@@ -112,7 +112,7 @@ function send_button_function(){
     }
 
     alert(return_first); 
-    display_history(return_first);
+    display_history(return_first.id);
 }
 
 function display_history(vector){
