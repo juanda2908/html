@@ -11,8 +11,8 @@ $conn = new mysqli($host,$username,$password,$database);
 if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
-  	echo $datetime_start;
-  	echo "\n";
+  	//echo $datetime_start;
+  	//echo "\n";
 }
 else
 {
@@ -24,8 +24,8 @@ else
 if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
-  	echo $datetime_end;
-  	echo "\n";
+  	//echo $datetime_end;
+  	//echo "\n";
 }
 else
 {
@@ -38,7 +38,6 @@ else
 // ultimo valor de la tabla llamada datos
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '".$datetime_start."' AND '".$datetime_end."' ORDER BY id"; 
 
-echo $query;
 // guardo en resultado lo que saqué de query
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
@@ -49,6 +48,9 @@ while ($r = mysqli_fetch_array($resultado)){
 }
 
 echo json_encode($rows);
+
+mysqli_close($conn);
+
 //echo $resultado;
 //var $output = ""; 
 /*
@@ -67,6 +69,5 @@ else {
 
 */
 
-mysqli_close($conn);
 ?>
 
