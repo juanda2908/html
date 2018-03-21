@@ -46,8 +46,7 @@ var $output = "";
 
 if($resultado = mysqli_query($conn, $query)){
 
-    $fila = mysqli_num_rows($resultado);
-    echo $fila; 
+    echo $resultado; 
     //echo $resultado; 
     //while ($fila = mysqli_fetch_row($resultado)) {
         //printf ("%s (%s)\n", $fila[0], $fila[1]);
