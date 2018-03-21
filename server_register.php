@@ -42,16 +42,16 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 // guardo en resultado lo que saqué de query
 //$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-var $output = ""; 
+//var $output = ""; 
 
-if($resultado = mysqli_query($conn, $query)){
+//if($resultado = mysqli_query($conn, $query)){
     //echo $resultado; 
-    while ($fila = mysqli_fetch_row($resultado)) {
+    //while ($fila = mysqli_fetch_row($resultado)) {
         //printf ("%s (%s)\n", $fila[0], $fila[1]);
-        $output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
-    }
-    mysqli_free_result($resultado);
-}
+        //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
+    //}
+    //mysqli_free_result($resultado);
+//}
 //if($resultado){
 
   //  while ($fila = mysqli_fetch_row($resultado)) {
@@ -65,13 +65,10 @@ if($resultado = mysqli_query($conn, $query)){
 //$fila = mysqli_fetch_row($resultado); 
 //$var = $fila[0];//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
 
-var $output; 
+//var $output; 
 // devuelve var
 //echo $var;
-//echo $resultado; 
-//echo "\'".$fila."\'";
-//echo "'$datetime_start'"
-//echo $_POST['date_time_end'];
+echo $query;
 mysqli_close($conn);
 ?>
 
