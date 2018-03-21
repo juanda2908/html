@@ -99,9 +99,10 @@ function send_button_function(){
             "date_time_end": datetime_end  
         }
         */ 
-        var parameters = 'date_time_start= ' + datetime_start + 'date_time_end=' + datetime_end;
+        //var parameters = 'date_time_start= ' + datetime_start + 'date_time_end=' + datetime_end;     
+        
         $.ajax({
-            'data': parameters, 
+            'data': { date_time_start : datetime_start, date_time_end : datetime_end }, 
             'async': false,
             'type': "POST",
             'global': false,
