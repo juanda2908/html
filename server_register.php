@@ -48,7 +48,10 @@ while ($r = mysqli_fetch_array($resultado)){
 }
 
 echo json_encode($rows);
-//echo $rows[];
+
+$fp = fopen('results.json', 'w');
+fwrite($fp, json_encode($rows));
+fclose($fp);
 
 mysqli_close($conn);
 
