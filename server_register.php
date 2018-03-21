@@ -9,7 +9,7 @@ if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
   	echo $datetime_start;
-  	echo " Fecha 1\n";
+  	echo "\n";
 }
 else
 {
@@ -22,7 +22,7 @@ if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
   	echo $datetime_end;
-  	echo " Fecha 1\n";
+  	echo "\n";
 }
 else
 {
@@ -40,7 +40,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
-//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 //if($resultado){
 
