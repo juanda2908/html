@@ -35,7 +35,7 @@ else
 }
 
 // Realizar una consulta MySQL
-// ultimo valor de la tabla llamada datos
+// ultimo valor de la tabla llamada datos""
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '".$datetime_start."' AND '".$datetime_end."' ORDER BY id"; 
 
 // guardo en resultado lo que saqué de query
@@ -50,24 +50,6 @@ while ($r = mysqli_fetch_array($resultado)){
 echo json_encode($rows);
 
 mysqli_close($conn);
-
-//echo $resultado;
-//var $output = ""; 
-/*
-if($resultado = mysqli_query($conn, $query)){
-    
-    for ($i=0;$i<$fila;$i++){
-        mysqli_data_seek($resultado,$i);
-        $row = mysqli_fetch_row($resultado);
-        echo $row[2]," ",$row[3]," ",$row[1]," ",$row[4];
-        echo "\n";
-    }
-}
-else {
-    echo "Error\n"; 
-}
-
-*/
 
 ?>
 

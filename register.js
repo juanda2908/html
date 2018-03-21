@@ -19,7 +19,6 @@ function initMap() {
     //marker = new google.maps.Marker({ }); //CREA OBJETO MARCADOR     
     refresh();  // FUNCION PARA REFRESCAR PAGINA
     
-    
     //setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 2 SEGUNDOS
     
     function refresh(){
@@ -93,14 +92,7 @@ function send_button_function(){
     //consula a la base de datos por medio del archivo php 
     var return_first = function () {
         var tmp = null;
-        /*
-        var parameters = {
-            "date_time_start": datetime_start,
-            "date_time_end": datetime_end  
-        }
-        */ 
-        //var parameters = 'date_time_start= ' + datetime_start + 'date_time_end=' + datetime_end;     
-        
+
         $.ajax({
             'data': { date_time_start : datetime_start, date_time_end : datetime_end }, 
             'async': false,
@@ -119,5 +111,15 @@ function send_button_function(){
         return_first="";
     }
 
-    alert(return_first); 
+    //alert(return_first); 
+    display_history(return_first);
+}
+
+function display_history(vector){
+    var i;
+    var code_html = "";
+    for (i = 0; i < vector.lenght; i++){
+        code_html += "<div>" + "</div>"; 
+    }
+    document.getElementById("history_section").innerHTML = code_html; 
 }
