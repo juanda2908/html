@@ -9,7 +9,7 @@ if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
   	echo $datetime_start;
-  	//echo " Fecha 1\n";
+  	echo " Fecha 1\n";
 }
 else
 {
@@ -22,7 +22,7 @@ if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
   	echo $datetime_end;
-  	//echo " Fecha 1\n";
+  	echo " Fecha 1\n";
 }
 else
 {
