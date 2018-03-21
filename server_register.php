@@ -64,7 +64,7 @@ if($resultado = mysqli_query($conn, $query)){
 
 // devuelve var
 //echo $var;
-//echo $query;
+echo $query;
 mysqli_close($conn);
 ?>
 
