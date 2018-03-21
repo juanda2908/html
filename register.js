@@ -125,3 +125,4 @@ function display_history(vector){
     }
     document.getElementById("history_section").innerHTML = code_html; 
 }
+//jajajaja
