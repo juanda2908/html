@@ -12,18 +12,19 @@ $conn = new mysqli($host,$username,$password,$database);
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
 //$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN ".$_GET['date_time_start']." AND ".$_GET['date_time_end']." ORDER BY id"; 
-$query = "SELECT * FROM designdatabase.position_data"; 
+$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 // guardo en un array lo que está en resultado, como string
-//$fila = mysqli_fetch_row($resultado); 
+$fila = mysqli_fetch_row($resultado); 
 //$var = $fila[0];//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
 
 // devuelve var
 //echo $var;
-echo $resultado; 
+//echo $resultado; 
+echo $fila;
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
 
