@@ -18,7 +18,9 @@ function initMap() {
     });
     //marker = new google.maps.Marker({ }); //CREA OBJETO MARCADOR     
     refresh();  // FUNCION PARA REFRESCAR PAGINA
-    setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 2 SEGUNDOS
+    
+    
+    //setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 2 SEGUNDOS
     
     function refresh(){
 
