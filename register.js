@@ -119,7 +119,8 @@ function display_history(vector){
     var i;
     var code_html = "";
     for (i = 0; i < vector.lenght; i++){
-        code_html += "<div>ID:" + vector[i].id + "latitude:" + vector[i].latitude + " longitude: " + vector[i].longitude  + "</div>";
+        alert(i);
+        code_html += "<div>ID:" + vector[i].id + "latitude: " + vector[i].latitude + " longitude: " + vector[i].longitude  + "</div>";
     }
     document.getElementById("history_section").innerHTML = code_html; 
 }
