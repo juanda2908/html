@@ -80,15 +80,21 @@ function initMap() {
 function send_button_function(){
     //alert("submit was pressed"); 
     //return true; 
-    var date_start = document.getElementById("start_calendar").value; 
-    var time_start = document.getElementById("start_time").value + ":00"; 
-    var date_end = document.getElementById("end_calendar").value;
-    var time_end = document.getElementById("end_time").value + ":00"; 
+    var datetime_start = document.getElementById("start_calendar").value + " " + 
+        document.getElementById("start_time").value + ":00"; 
+
+    var datetime_end = document.getElementById("end_calendar").value + " " + 
+        document.getElementById("end_time").value + ":00"; 
 
     //consula a la base de datos por medio del archivo php 
     var return_first = function () {
         var tmp = null;
+        var parameters = {
+            "date_time_start": datetime_start,
+            "date_time_end": datetime_end  
+        }
         $.ajax({
+            'data': parameters, 
             'async': false,
             'type': "POST",
             'global': false,
@@ -104,4 +110,6 @@ function send_button_function(){
     if (return_first==null) {
         return_first="";
     }
+
+    alert(return_first); 
 }
