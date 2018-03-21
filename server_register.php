@@ -8,27 +8,27 @@ $database = "designdatabase";
 if (isset($_POST['date_time_start']))
 {
     $datetime_start = $_POST['date_time_start'];
-  	//echo $datetime_start;
+  	echo $datetime_start;
   	//echo " Fecha 1\n";
 }
 else
 {
   	//$datetime_start = null;
     //$datetime_start = "2000/1/1";
- 	//echo "no fecha inicio\n";
+    echo "no fecha inicio\n";
 }
 
 if (isset($_POST['date_time_end']))
 {
     $datetime_end = $_POST['date_time_end'];
-  	//echo $datetime_end;
+  	echo $datetime_end;
   	//echo " Fecha 1\n";
 }
 else
 {
-  	//$datetime_end = null;
+  	//$datetime_end= null;
     //$datetime_end = "2000/1/1";
- 	//echo "no fecha inicio\n";
+ 	echo "no fecha inicio\n";
 }
 
 // conecta al servidor con user, contraseña
@@ -59,7 +59,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //echo $var;
 //echo $resultado; 
 //echo "\'".$fila."\'";
-echo "'$datetime_start'"
+//echo "'$datetime_start'"
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
 ?>
