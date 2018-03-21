@@ -36,7 +36,7 @@ $conn = new mysqli($host,$username,$password,$database);
 
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
-$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$datetime_start' AND '$datetime_end' ORDER BY id;"; 
+$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$datetime_start' AND '$datetime_end' ORDER BY id"; 
 //$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
@@ -46,11 +46,12 @@ var $output = "";
 
 if($resultado = mysqli_query($conn, $query)){
 
-    while ($fila = mysqli_fetch_row($resultado)) {
-        echo $fila[0]; 
-        //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
+    for ($i=0;$i<$fila;$i++){
+        mysqli_data_seek($resultado,$i);
+        $row = mysqli_fetch_row($resultado);
+        echo $row[2]," ",$row[3]," ",$row[1]," ",$row[4];
+        echo "\n";
     }
-    mysqli_free_result($resultado);
 }
 else {
     echo "Error\n"; 
