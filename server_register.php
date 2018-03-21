@@ -45,20 +45,23 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 var $output = ""; 
 
 if($resultado = mysqli_query($conn, $query)){
+
+    $fila = mysqli_num_rows($resultado);
     //echo $resultado; 
-    while ($fila = mysqli_fetch_row($resultado)) {
+    //while ($fila = mysqli_fetch_row($resultado)) {
         //printf ("%s (%s)\n", $fila[0], $fila[1]);
 
-        echo $fila; 
-        $output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
-    }
-    mysqli_free_result($resultado);
+        //echo $fila; 
+        //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
+    //}
+    //mysqli_free_result($resultado);
 }
 
 // guardo en un array lo que está en resultado, como string
 //$fila = mysqli_fetch_row($resultado); 
 
-echo $output; 
+//echo $output; 
+echo $fila; 
 // devuelve var
 //echo $var;
 //echo $query;
