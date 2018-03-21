@@ -15,9 +15,11 @@
     </header>
     <section>
         <form action="/action_page.php" id = "datetime_form">
-            Fecha Inicio: <input type = "date" name = "start_calendar" id = "start_calendar">
+            Fecha Inicio: <input type = "date" name = "start_calendar" id = "start_calendar" 
+            value="<?php echo date('Y-m-d'); ?>" >
             Hora Inicio: <input type = "time" name = "start_time" id = "start_time" value = "00:01"><br>
-            Fecha Final: <input type = "date" name = "end_calendar" id = "end_calendar">
+            Fecha Final: <input type = "date" name = "end_calendar" id = "end_calendar" 
+            value="<?php echo date('Y-m-d'); ?>" >
             Hora Final: <input type = "time" name = "end_time" id = id = "end_time" value = "23:59"><br>
             <input type = "button" value = "Enviar" onclick = "send_button_function();">
         </form>
