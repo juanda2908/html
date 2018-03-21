@@ -2,6 +2,15 @@ var marker ; //CREA OBJETO MARCADOR
 var route = [];
 var map; 
 
+window.addEventListener("load", init_page, true); 
+
+function init_page(){
+    var today = moment().format('YYYY-MM-DD');
+    document.getElementById("start_calendar").value = today;
+    document.getElementById("end_calendar").value = today; 
+    //alert(today); 
+}
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), { //ASOCIAR VARIABLE CON ID
         zoom: 16,
@@ -72,7 +81,10 @@ function send_button_function(){
     //alert("submit was pressed"); 
     //return true; 
     var date_start = document.getElementById("start_calendar").value; 
-    var date_end = document.getElementById("end_calendar").value; 
+    var time_start = document.getElementById("start_time").value + ":00"; 
+    var date_end = document.getElementById("end_calendar").value;
+    var time_end = document.getElementById("end_time").value + ":00"; 
 
-    alert(date_start + "\n" + date_end); 
+    //alert(date_start + "\n" + date_end); 
+    //alert(time_end); 
 }
