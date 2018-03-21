@@ -87,6 +87,8 @@ function send_button_function(){
 
     var datetime_end = document.getElementById("end_calendar").value + " " + 
         document.getElementById("end_time").value + ":00"; 
+    
+    //alert(datetime_start + "\n" + datetime_end);
 
     //consula a la base de datos por medio del archivo php 
     var return_first = function () {

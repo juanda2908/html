@@ -15,15 +15,16 @@ $query = sprintf("SELECT * FROM designdatabase.position_data WHERE datetime BETW
     AND %s ORDER BY id", $_POST['date_time_start'], $_POST['date_time_end']); 
 
 // guardo en resultado lo que saqué de query
-$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 // guardo en un array lo que está en resultado, como string
-$fila = mysqli_fetch_row($resultado); 
-$var = $fila[0];//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
+//$fila = mysqli_fetch_row($resultado); 
+//$var = $fila[0];//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
 
 // devuelve var
 //echo $var;
-echo $resultado; 
+//echo $resultado; 
+echo $query
 mysqli_close($conn);
 
 ?>
