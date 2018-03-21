@@ -10,16 +10,13 @@
     <script>
         var marker ; //CREA OBJETO MARCADOR
         var route = [];
-        //INICIALIZAR EL MAPA
         function initMap() {
          var map = new google.maps.Map(document.getElementById('map'), { //ASOCIAR VARIABLE CON ID
            zoom: 16,
            center: {lat: 11.019010, lng: -74.850505}
          });
 
-
          //marker = new google.maps.Marker({ }); //CREA OBJETO MARCADOR     
-         //var route = [];
          refresh();  // FUNCION PARA REFRESCAR PAGINA
          setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 2 SEGUNDOS
      
