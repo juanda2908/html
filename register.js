@@ -93,10 +93,13 @@ function send_button_function(){
     //consula a la base de datos por medio del archivo php 
     var return_first = function () {
         var tmp = null;
+        /*
         var parameters = {
             "date_time_start": datetime_start,
             "date_time_end": datetime_end  
         }
+        */ 
+        var parameters = 'date_time_start= ' + datetime_start + 'date_time_end=' + datetime_end;
         $.ajax({
             'data': parameters, 
             'async': false,
