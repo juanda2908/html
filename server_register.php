@@ -44,14 +44,14 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 
 //var $output = ""; 
 
-//if($resultado = mysqli_query($conn, $query)){
+if($resultado = mysqli_query($conn, $query)){
     //echo $resultado; 
-    //while ($fila = mysqli_fetch_row($resultado)) {
-        //printf ("%s (%s)\n", $fila[0], $fila[1]);
-        //$output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
-    //}
-    //mysqli_free_result($resultado);
-//}
+    while ($fila = mysqli_fetch_row($resultado)) {
+        printf ("%s (%s)\n", $fila[0], $fila[1]);
+        $output .= $fila[0]." ".$fila[1]." ".$fila[2]." ".$fila[3]." ".$fila[4]." ".$fila[5]."\n";
+    }
+    mysqli_free_result($resultado);
+}
 //if($resultado){
 
   //  while ($fila = mysqli_fetch_row($resultado)) {
@@ -63,12 +63,11 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 
 // guardo en un array lo que está en resultado, como string
 //$fila = mysqli_fetch_row($resultado); 
-//$var = $fila[0];//$fila[1]."\n".$fila[2]."\n".$fila[3]."\n".$fila[4]."\n".$fila[5]."\n";
 
-//var $output; 
+var $output; 
 // devuelve var
 //echo $var;
-echo $query;
+//echo $query;
 mysqli_close($conn);
 ?>
 
