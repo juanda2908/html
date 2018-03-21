@@ -18,16 +18,16 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '$da
 //$query = "SELECT * FROM designdatabase.position_data ORDER BY id DESC LIMIT 1"; 
 
 // guardo en resultado lo que saqué de query
-$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
+//$resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-if($resultado){
+//if($resultado){
 
-    while ($fila = mysqli_fetch_row($resultado)) {
-        printf ("%s (%s)\n", $fila[0], $fila[1]);
-    }
+  //  while ($fila = mysqli_fetch_row($resultado)) {
+    //    printf ("%s (%s)\n", $fila[0], $fila[1]);
+    //}
     
-    mysqli_free_result($resultado);
-}
+    //mysqli_free_result($resultado);
+//}
 
 // guardo en un array lo que está en resultado, como string
 //$fila = mysqli_fetch_row($resultado); 
@@ -36,7 +36,8 @@ if($resultado){
 // devuelve var
 //echo $var;
 //echo $resultado; 
-echo "\'".$fila."\'";
+//echo "\'".$fila."\'";
+echo $datetime_start
 //echo $_POST['date_time_end'];
 mysqli_close($conn);
 ?>
