@@ -1,8 +1,9 @@
 var marker ; //CREA OBJETO MARCADOR
 var route = [];
+var map; 
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), { //ASOCIAR VARIABLE CON ID
+    map = new google.maps.Map(document.getElementById('map'), { //ASOCIAR VARIABLE CON ID
         zoom: 16,
         center: {lat: 11.019010, lng: -74.850505}
     });
@@ -68,6 +69,10 @@ function initMap() {
 }
 
 function send_button_function(){
-    altert("submit was pressed"); 
-    return true; 
+    //alert("submit was pressed"); 
+    //return true; 
+    var date_start = document.getElementById("start_calendar").value; 
+    var date_end = document.getElementById("end_calendar").value; 
+
+    alert(date_start + "\n" + date_end); 
 }
