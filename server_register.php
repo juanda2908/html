@@ -11,7 +11,7 @@ $conn = new mysqli($host,$username,$password,$database);
 
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos
-$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN "
+$query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN ";
 //.$_GET['date_time_start']." AND ".$_GET['date_time_end']." ORDER BY id"; 
 
 // guardo en resultado lo que saqué de query
