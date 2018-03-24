@@ -1,3 +1,5 @@
-Hello... this is my README file
+Hello... this is README file
 
-Atte. Jorge Daniel Aguilar Orozco.
+Atte:
+Jorge Daniel Aguilar Orozco.
+Jorge Lambraño Arroyo.
