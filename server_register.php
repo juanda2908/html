@@ -39,14 +39,11 @@ else
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '".$datetime_start."' AND '".$datetime_end."' ORDER BY id"; 
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-/*
 $rows[] = array(); 
  
 while ($r = mysqli_fetch_array($resultado)){ 
     $rows[] = $r; 
 }
-*/
-//$rows = mysqli_fetch_all($resultado)
 
 //echo json_encode($rows);
 
