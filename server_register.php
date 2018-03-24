@@ -41,7 +41,7 @@ $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '".$
 // guardo en resultado lo que saqué de query
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
-$rows = mysqli_fetch_all($resultado)
+$rows = mysqli_fetch_all($resultado,MYSQLI_ASSOC)
 
 echo json_encode($rows);
 
