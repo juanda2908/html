@@ -1,5 +1,5 @@
 <?php
-// Conectando, seleccionando la base de datos
+
 $host = "designdatabase.cg6tv9ndrugo.us-west-2.rds.amazonaws.com";
 $username = "admin";
 $password = "admin123456";
