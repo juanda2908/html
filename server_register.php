@@ -37,8 +37,6 @@ else
 // Realizar una consulta MySQL
 // ultimo valor de la tabla llamada datos""
 $query = "SELECT * FROM designdatabase.position_data WHERE datetime BETWEEN '".$datetime_start."' AND '".$datetime_end."' ORDER BY id"; 
-
-// guardo en resultado lo que saqué de query
 $resultado = mysqli_query($conn, $query) or die("Consulta fallida: " . mysqli_error()); 
 
 $rows[] = array(); 
