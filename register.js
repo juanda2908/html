@@ -111,10 +111,34 @@ function send_button_function(){
         return_first="";
     }
 
+    var data = JSON.parse(response)
+    
+    data.forEach(function(element){
+        console.log(element);
+    });
+    
+    /*
+    client.get(theurl, function(response) {
+        var response1 = JSON.parse(response);
+        t=response1;
+        if(response1==""){
+           alert("No se encontro resultado")
+           polilinea=[];
+        }
+       
+
+         response1.forEach(function(element) {
+             //console.log(element);
+             polilinea.push({lat: parseFloat(element.latitud), lng: parseFloat(element.longitud)});
+    */         
+
+
+
     alert(return_first); 
     display_history(return_first);
 }
 
+/*
 function display_history(vector){
     var i;
     var code_html = "";
@@ -126,3 +150,4 @@ function display_history(vector){
     }
     document.getElementById("history_section").innerHTML = code_html; 
 }
+*/
