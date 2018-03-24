@@ -113,10 +113,14 @@ function send_button_function(){
 
     var data = JSON.parse(response)
     
+    alert(data);
+
+    /*
     data.forEach(function(element){
         console.log(element);
     });
-    
+    */
+
     /*
     client.get(theurl, function(response) {
         var response1 = JSON.parse(response);
@@ -134,8 +138,8 @@ function send_button_function(){
 
 
 
-    alert(return_first); 
-    display_history(return_first);
+    //alert(return_first); 
+    //display_history(return_first);
 }
 
 /*
