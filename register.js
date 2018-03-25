@@ -121,37 +121,5 @@ function send_button_function(){
         console.log(element.longitude);
     });
     
-    /*
-    client.get(theurl, function(response) {
-        var response1 = JSON.parse(response);
-        t=response1;
-        if(response1==""){
-           alert("No se encontro resultado")
-           polilinea=[];
-        }
-       
-
-         response1.forEach(function(element) {
-             //console.log(element);
-             polilinea.push({lat: parseFloat(element.latitud), lng: parseFloat(element.longitud)});
-    */         
-
-
-
-    //alert(return_first); 
-    //display_history(return_first);
 }
 
-/*
-function display_history(vector){
-    var i;
-    var code_html = "";
-    for (i = 0; i < vector.length; i++){
-        console.log(vector[i].type);
-        //alert(i);
-        //code_html += "<div>ID:" + vector[i].id + "latitude: " + vector[i].latitude + " longitude: " + vector[i].longitude  + "</div>";
-        code_html += "<div>" + vector[i].datetime +"</div>";
-    }
-    document.getElementById("history_section").innerHTML = code_html; 
-}
-*/
