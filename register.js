@@ -115,6 +115,7 @@ function send_button_function(){
     var data = JSON.parse(return_first);
     
     data.forEach(function(element){
+        console.log(element.id);
         console.log(element.latitude);
         console.log(element.longitude);
     });
