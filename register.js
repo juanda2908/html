@@ -115,12 +115,12 @@ function send_button_function(){
     
     alert(data);
 
-    /*
+    
     data.forEach(function(element){
-        console.log(element);
+        console.log(element.latitude);
+        console.log(element.longitude);
     });
-    */
-
+    
     /*
     client.get(theurl, function(response) {
         var response1 = JSON.parse(response);
