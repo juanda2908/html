@@ -86,7 +86,7 @@ function UpdatePolyline(route){
 }
 
 function CreateMarker(OriginPoint)
-    var marker = new google.maps.Marker({  // función de api para crear marcador
+    marker = new google.maps.Marker({  // función de api para crear marcador
         position: OriginPoint,
         map: map,
         label: 'O'
