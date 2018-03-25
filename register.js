@@ -1,5 +1,6 @@
 var marker ; //CREA OBJETO MARCADOR
 var route = [];
+var polilinea;
 var map; 
 
 window.addEventListener("load", init_page, true); 
@@ -79,20 +80,15 @@ function initMap() {
 }
 
 function send_button_function(){
-    //alert("submit was pressed"); 
-    //return true; 
+
     var datetime_start = document.getElementById("start_calendar").value + " " + 
         document.getElementById("start_time").value + ":00"; 
 
     var datetime_end = document.getElementById("end_calendar").value + " " + 
         document.getElementById("end_time").value + ":00"; 
-    
-    //alert(datetime_start + "\n" + datetime_end);
 
-    //consula a la base de datos por medio del archivo php 
     var return_first = function () {
         var tmp = null;
-
         $.ajax({
             'data': { date_time_start : datetime_start, date_time_end : datetime_end }, 
             'async': false,
@@ -113,21 +109,32 @@ function send_button_function(){
 
     alert(return_first);
     var data = JSON.parse(return_first);
+    var latitude;
+    var longitude;
     
     data.forEach(function(element){
-
-        if(element.id != undefined){
-            console.log(element.id);
-        }
-        
         if(element.latitude != undefined){
             console.log(element.latitude);
+            latitude = parseFloat(element.latitude);
         }
         if(element.longitude != undefined){
             console.log(element.latitude);
+            longitude = parseFloat(element.longitude)
         }
-
+        route.push({lat: latitude, lng: longitude})
     });
     
-}
+    polilinea = new google.maps.Polyline({
+        path: route,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+      
+      //data=null;
 
+      polilinea.setMap(map);
+
+
+}
