@@ -1,5 +1,5 @@
 var marker ; //CREA OBJETO MARCADOR
-var polilinea;
+var polilinea = new google.maps.Polyline();
 var map; 
 
 window.addEventListener("load", init_page, true); 
