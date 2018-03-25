@@ -111,10 +111,8 @@ function send_button_function(){
         return_first="";
     }
 
+    alert(return_first);
     var data = JSON.parse(return_first);
-    
-    alert(data);
-
     
     data.forEach(function(element){
         console.log(element.latitude);
