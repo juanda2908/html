@@ -1,5 +1,5 @@
 var marker ; //CREA OBJETO MARCADOR
-var polilinea ;
+var polilinea = null;
 var map; 
 
 window.addEventListener("load", init_page, true); 
@@ -57,6 +57,16 @@ function send_button_function(){
         }
     });
     
+    if(polilinea == null){
+        CreatePolyline(route);
+    }
+    else{
+        UpdatePolyline(route);
+    }
+      //polilinea.setMap(null);
+}
+
+function CreatePolyline(route){
     polilinea = new google.maps.Polyline({
         path: route,
         geodesic: true,
@@ -64,8 +74,12 @@ function send_button_function(){
         strokeOpacity: 1.0,
         strokeWeight: 2
       });
-      
-      data = null;
+      //
       polilinea.setMap(map);
-      //polilinea.setMap(null);
+}
+
+function UpdatePolyline(route){
+    polilinea.setMap(null);
+    polilinea = null;    
+    CreatePolyline(route);
 }
