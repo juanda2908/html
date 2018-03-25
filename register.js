@@ -116,12 +116,17 @@ function send_button_function(){
     
     data.forEach(function(element){
 
-        if(element !== undefined){
+        if(element.id != undefined){
             console.log(element.id);
-            console.log(element.latitude);
-            console.log(element.longitude);
         }
         
+        if(element.latitude != undefined){
+            console.log(element.latitude);
+        }
+        if(element.longitude != undefined){
+            console.log(element.latitude);
+        }
+
     });
     
 }
