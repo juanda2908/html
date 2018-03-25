@@ -1,4 +1,4 @@
-var marker ; //CREA OBJETO MARCADOR
+var marker = null; //CREA OBJETO MARCADOR
 var polilinea = null;
 var map; 
 
@@ -53,7 +53,13 @@ function send_button_function(){
             route.push({lat: parseFloat(element.latitude), lng: parseFloat(element.longitude)})
         }
     });
-    
+    var OriginPoint = route[0];
+    if(marker==null){
+        CreateMarker();
+    }
+    else{
+        UpdateMarker();
+    }
     if(polilinea == null){
         CreatePolyline(route);
     }
@@ -78,3 +84,17 @@ function UpdatePolyline(route){
     polilinea = null;    
     CreatePolyline(route);
 }
+
+function CreateMarker(OriginPoint)
+    var marker = new google.maps.Marker({  // función de api para crear marcador
+        position: OriginPoint,
+        map: map,
+        label: "O"
+      });
+
+function UpdateMarker(OriginPoint){
+    marker.setMap(null);
+    marker = null;
+    CreateMarker(OriginPoint);
+}
+    
