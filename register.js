@@ -1,5 +1,4 @@
 var marker ; //CREA OBJETO MARCADOR
-var route = [];
 var polilinea;
 var map; 
 
@@ -48,7 +47,10 @@ function send_button_function(){
     var data = JSON.parse(return_first);
     var latitude;
     var longitude;
+    var route = [];
     
+    polilinea.setMap(null);
+
     data.forEach(function(element){
         if(element.latitude != undefined && element.longitude != undefined){
             //console.log(element.latitude);
@@ -69,7 +71,3 @@ function send_button_function(){
       polilinea.setMap(map);
 
 }
-
-function removeLine() {
-    polilinea.setMap(null);
-  }
