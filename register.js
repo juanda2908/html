@@ -16,7 +16,6 @@ function initMap() {
         zoom: 16,
         center: {lat: 11.019010, lng: -74.850505}
     });
-  
 }
 
 function send_button_function(){
@@ -53,15 +52,11 @@ function send_button_function(){
     var longitude;
     
     data.forEach(function(element){
-        if(element.latitude != undefined){
-            console.log(element.latitude);
-            latitude = parseFloat(element.latitude);
+        if(element.latitude != undefined && element.longitude != undefined){
+            //console.log(element.latitude);
+            //console.log(element.longitude);
+            route.push({lat: parseFloat(element.latitude), lng: parseFloat(element.longitude)})
         }
-        if(element.longitude != undefined){
-            console.log(element.longitude);
-            longitude = parseFloat(element.longitude)
-        }
-        route.push({lat: latitude, lng: longitude})
     });
     
     polilinea = new google.maps.Polyline({
