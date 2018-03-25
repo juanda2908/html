@@ -111,7 +111,7 @@ function send_button_function(){
         return_first="";
     }
 
-    var data = JSON.parse(response)
+    var data = JSON.parse(return_first);
     
     alert(data);
 
