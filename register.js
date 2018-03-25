@@ -22,7 +22,6 @@ function send_button_function(){
 
     var datetime_start = document.getElementById("start_calendar").value + " " + 
         document.getElementById("start_time").value + ":00"; 
-
     var datetime_end = document.getElementById("end_calendar").value + " " + 
         document.getElementById("end_time").value + ":00"; 
 
@@ -45,7 +44,6 @@ function send_button_function(){
     if (return_first==null) {
         return_first="";
     }
-
     //alert(return_first);
     var data = JSON.parse(return_first);
     var latitude;
@@ -67,7 +65,7 @@ function send_button_function(){
         strokeWeight: 2
       });
       
-      data=null;
+      data = null;
       polilinea.setMap(map);
 
 }
