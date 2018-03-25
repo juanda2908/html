@@ -39,11 +39,10 @@ function send_button_function(){
         });
         return tmp;     
     }();
-
     if (return_first==null) {
         return_first="";
     }
-    //alert(return_first);
+
     var data = JSON.parse(return_first);
     var latitude;
     var longitude;
@@ -51,8 +50,6 @@ function send_button_function(){
     
     data.forEach(function(element){
         if(element.latitude != undefined && element.longitude != undefined){
-            //console.log(element.latitude);
-            //console.log(element.longitude);
             route.push({lat: parseFloat(element.latitude), lng: parseFloat(element.longitude)})
         }
     });
@@ -63,7 +60,6 @@ function send_button_function(){
     else{
         UpdatePolyline(route);
     }
-      //polilinea.setMap(null);
 }
 
 function CreatePolyline(route){
@@ -74,7 +70,6 @@ function CreatePolyline(route){
         strokeOpacity: 1.0,
         strokeWeight: 2
       });
-      //
       polilinea.setMap(map);
 }
 
