@@ -55,10 +55,10 @@ function send_button_function(){
     });
     var OriginPoint = route[0];
     if(marker == null){
-        CreateMarker();
+        CreateMarker(OriginPoint);
     }
     else{
-        UpdateMarker();
+        UpdateMarker(OriginPoint);
     }
     if(polilinea == null){
         CreatePolyline(route);
