@@ -9,11 +9,11 @@ function initMap(){
         zoom: 16,
         center: {lat: 11.019010, lng: -74.850505}
     });
+    refresh();  // FUNCION PARA REFRESCAR PAGINA
+    setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 1 SEGUNDOS    
 }
-
-refresh();  // FUNCION PARA REFRESCAR PAGINA
-setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 1 SEGUNDOS
-
+//refresh();  // FUNCION PARA REFRESCAR PAGINA
+//setInterval(refresh,1000); //LLAMA LA FUNCION REFRESH CADA 1 SEGUNDOS
 function refresh(){
     var return_first = function () {
          var tmp = null;
