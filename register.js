@@ -46,7 +46,7 @@ function send_button_function(){
         return_first="";
     }
 
-    alert(return_first);
+    //alert(return_first);
     var data = JSON.parse(return_first);
     var latitude;
     var longitude;
@@ -67,7 +67,11 @@ function send_button_function(){
         strokeWeight: 2
       });
       
-      //data=null;
+      data=null;
       polilinea.setMap(map);
 
 }
+
+function removeLine() {
+    polilinea.setMap(null);
+  }
