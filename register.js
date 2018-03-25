@@ -1,5 +1,5 @@
 var marker ; //CREA OBJETO MARCADOR
-var polilinea = new google.maps.Polyline();
+var polilinea ;
 var map; 
 
 window.addEventListener("load", init_page, true); 
@@ -49,8 +49,6 @@ function send_button_function(){
     var longitude;
     var route = [];
     
-    polilinea.setMap(null);
-
     data.forEach(function(element){
         if(element.latitude != undefined && element.longitude != undefined){
             //console.log(element.latitude);
@@ -69,5 +67,5 @@ function send_button_function(){
       
       data = null;
       polilinea.setMap(map);
-
+      //polilinea.setMap(null);
 }
